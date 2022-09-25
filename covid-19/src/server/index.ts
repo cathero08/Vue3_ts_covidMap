@@ -5,6 +5,6 @@ const server = axios.create({
 })
 
 export const getList = () => {
-  const res =  server.get('/api/list').then((res) => res.data);
+  const res =  server.get('https://api.inews.qq.com/newsqa/v1/query/inner/publish/modules/list?modules=localCityNCOVDataList,diseaseh5Shelf').then((res) => res.data.data);
   return res;
 }
