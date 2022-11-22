@@ -304,6 +304,10 @@ onMounted(async () => {
   initEcharts();
   initEchartsPie();
   initEchartsLine();
+  window.onresize = () =>{
+    const qqq = echarts.init(document.querySelector("#china") as HTMLElement)
+    qqq.resize();
+  }
 });
 </script>
 <style lang="scss" scope>
